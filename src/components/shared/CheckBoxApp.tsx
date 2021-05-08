@@ -9,7 +9,7 @@ export const CheckBoxApp = () => {
     	<label
 				className="check-box-app__label"
 				htmlFor="check1"
-				>si
+			>
 			</label>
 		</div>
 	)

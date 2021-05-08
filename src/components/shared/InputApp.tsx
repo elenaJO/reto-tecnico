@@ -1,8 +1,12 @@
-export const InputApp = () => {
+type InputArgs = {
+	optionalClass?: string
+}
+
+export const InputApp = ({ optionalClass }: InputArgs) => {
 	return (
-		<div>
+		<div className={optionalClass}>
 			<input
-				className="input-app" 
+				className="input-app"
 				type="text"
 				placeholder="Nro. de doc"
 				name="documentNumber"
