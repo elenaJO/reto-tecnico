@@ -1,0 +1,54 @@
+.input-app {
+	border: 1px solid $border-grey;
+	border-radius: 4px;
+	color: $primary;
+	outline: none;
+	padding: 16px;
+	height: 56px;
+
+	&::placeholder {
+		color: $light-grey;
+		font-size: $medium16;
+	}
+}
+
+.content-select {
+  appearance: none;
+	max-width: 384px;
+  position: relative;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+
+  &__select {
+		appearance: none;
+		background-position: right center;
+		background-repeat: no-repeat;
+		border: 1px solid $border-grey;
+		border-radius: 4px;
+		color: $primary;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 16px;
+		height: 56px;
+		max-width: 384px;
+		outline: none; 
+		padding: 16px;
+    position: relative;
+    width: 100%;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-o-appearance: none;
+  }
+
+  i {
+		background-image: url('../../assets/icons/chevrot.svg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 5px);
+    width: 10px;
+    height: 6px;
+  }
+}
