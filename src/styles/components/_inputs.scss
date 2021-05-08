@@ -2,9 +2,11 @@
 	border: 1px solid $border-grey;
 	border-radius: 4px;
 	color: $primary;
+	display: inline-block;
 	outline: none;
 	padding: 16px;
 	height: 56px;
+	width: 100%;
 
 	&::placeholder {
 		color: $light-grey;
@@ -14,7 +16,6 @@
 
 .content-select {
   appearance: none;
-	max-width: 384px;
   position: relative;
 	-webkit-appearance: none;
   -moz-appearance: none;
@@ -30,7 +31,6 @@
 		display: inline-block;
 		font-size: 16px;
 		height: 56px;
-		max-width: 384px;
 		outline: none; 
 		padding: 16px;
     position: relative;
