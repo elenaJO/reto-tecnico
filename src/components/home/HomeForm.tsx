@@ -21,7 +21,6 @@ export const HomeForm = () => {
 						<span className="home-form__text-underline">Términos y Condiciones.</span>
 					</p>
 				</div>
-				
 				<BtnApp title="cotízalo"/>
 			</form>
 		</div>
