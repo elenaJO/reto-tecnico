@@ -1,0 +1,32 @@
+.auto-data-steps {
+	border-bottom: 1px solid $light-blue;
+	display: flex;
+	justify-content: space-between;
+	padding: 72px 32px 11px 32px;
+
+	&__step {
+		color: $medium-grey;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+	}
+
+	&__bar {
+		background-color: $light-blue;
+		border-radius: 20px;
+		height: 6px;
+		margin-left: 16px;
+		width: 176px;
+
+		&--active {
+			background-color: $medium-purple;
+			border-radius: 20px;
+			height: 100%;
+			width: 20%;
+		}
+	}
+
+	&__content-step {
+		align-items: center;
+		display: flex;
+	}
+}
