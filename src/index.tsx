@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 
 import './styles/styles.scss'
+import { BtnApp } from './components/shared/buttons/BtnApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BtnApp title={'COTÍZALO'}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
