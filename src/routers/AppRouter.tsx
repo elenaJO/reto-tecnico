@@ -1,4 +1,5 @@
 import { PublicRouter } from './PublicRouter';
+import { PrivateRouter } from './PrivateRouter';
 import { HeaderApp } from '../components/shared/HeaderApp';
 import {
   BrowserRouter as Router,
@@ -13,8 +14,9 @@ export const AppRouter = () => {
 			<>
 				<Router>
 					<Switch>
-						<PublicRouter path="/vehicle"/>
-						<Redirect to="/vehicle"/>
+						<PublicRouter path="/register"/>
+						<PrivateRouter path="/" exact/>
+						<Redirect to="/register"/>
 					</Switch>
 				</Router>
 			</>
