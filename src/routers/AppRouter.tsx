@@ -15,7 +15,7 @@ export const AppRouter = () => {
 				<Router>
 					<Switch>
 						<PublicRouter path="/register"/>
-						<PrivateRouter path="/" exact/>
+						<PrivateRouter path="/"/>
 						<Redirect to="/register"/>
 					</Switch>
 				</Router>

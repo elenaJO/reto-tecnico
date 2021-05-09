@@ -1,13 +1,13 @@
 import { Route } from 'react-router-dom'
+import { VehicleRouter } from './VehicleRouter'
 type RouteArgs = {
-	path: string,
-	exact?: boolean,
+	path: string
 }
 
-export const PrivateRouter = ({ path, exact }: RouteArgs) => {
+export const PrivateRouter = ({ path }: RouteArgs) => {
 	return (
-		<Route path={path} exact={exact}>
-			<h1>ahaha</h1>
+		<Route path={path}>
+			<VehicleRouter/>
     </Route>
 	)
 }
