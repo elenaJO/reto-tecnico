@@ -1,0 +1,23 @@
+.counter-app {
+	align-items: center;
+	border: 1px solid $border-grey;
+	border-radius: 4px;
+	color: $primary;
+	display: flex;
+	justify-content: space-between;
+	height: 56px;
+	margin: 0 auto 40px auto;
+	max-width: 296px;
+	padding: 0 19px;
+
+	&__btn {
+		background-color: transparent;
+		border: none;
+		color: $medium-purple;
+		font-size: 23px;
+	}
+
+	&__text {
+		font-size: $medium16;
+	}
+}

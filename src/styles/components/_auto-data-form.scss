@@ -1,0 +1,82 @@
+.auto-data-form {
+	padding: 40px 32px 56px 32px;
+
+	&__text {
+		color: $primary;
+		font-size: $large28;
+		line-height: $large36;
+		margin-bottom: 8px;
+
+		&--name {
+			color: $rimac-red;
+		}
+	}
+
+	&__info {
+		color: $medium-grey;
+		font-family: 'Roboto', sans-serif;
+		font-size: $medium16;
+		line-height: $large28;
+		margin-bottom: 32px;
+	}
+
+	&__content-img {
+		background-color: $medium-white;
+		border-radius: 8px;
+		display: flex;
+		margin: 24px auto 32px auto;
+		max-width: 296px;
+		padding: 16px;
+	}
+
+	&__text-model {
+		color: $medium-grey;
+		font-family: 'Roboto';
+		line-height: 24px;
+		margin-bottom: 4px;
+	}
+
+	&__text-link {
+		color: $medium-purple;
+		font-size: 10px;
+		font-weight: 700;
+		letter-spacing: 0.8px;
+	}
+
+	&__content-text {
+		margin-left: 18px;
+	}
+
+	&__text--small {
+		color: $primary;
+		font-size: $medium16;
+		line-height: $large;
+		letter-spacing: 0.2px;
+		margin-bottom: 4px
+	}
+
+	&__price {
+		color: $medium-grey;
+		font-size: $small;
+		letter-spacing: 0.6px;
+		line-height: $medium16;
+	}
+
+	.text-left {
+		border-right: 1px solid $light-blue;
+		padding-right: 12px;
+	}
+	
+	.text-right {
+		padding-left: 12px;
+	}
+
+	.radio-right {
+		margin-right: 32px;
+	}
+
+	&__group-radio {
+		display: flex;
+		margin: 14px 0 30px 0;
+	}
+}

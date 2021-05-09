@@ -4,7 +4,7 @@ type SelectArgs = {
 
 export const SelectApp = ({ optionalClass }: SelectArgs) => {
 	return (
-		<div 	className={`${optionalClass} content-select`}>
+		<div className={`${optionalClass} content-select`}>
 			<select name="select-example" className="content-select__select">
 				<option value="value1">DNI</option>
 				<option value="value1">CE</option>

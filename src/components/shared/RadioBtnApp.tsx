@@ -1,6 +1,10 @@
-export const RadioBtnApp = () => {
+type RadioBtnArgs = {
+	optionalClass?: string
+}
+
+export const RadioBtnApp = ({ optionalClass }: RadioBtnArgs) => {
 	return (
-		<div className="radio-btn-app">
+		<div className={`${optionalClass} radio-btn-app`}>
 			<input
 				className="radio-btn-app__radio"
 				type="radio" 
@@ -9,7 +13,7 @@ export const RadioBtnApp = () => {
     	<label
 				className="radio-btn-app__label"
 				htmlFor="check2"
-				>si
+			>Si
 			</label>
 		</div>
 	)
