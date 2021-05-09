@@ -87,13 +87,25 @@
 	}
 
 	&__label {
+		color: $primary;
+		font-size: $medium16;
+		line-height: $medium16;
+		position: relative;
+    width: 49px;
+    display: inline-block;
+    text-align: right;
+
 		&::before {
 			content:'';
 			background:transparent;
 			border: 1px solid $border-grey;
 			border-radius: 50%;
+			bottom: -4px;
 			display: inline-block;
 			height: 20px;
+			left: 0;
+			margin-right: 12px;
+			position: absolute;
 			width: 20px;
 		}
 	}
