@@ -3,8 +3,11 @@ import { InputApp } from "../shared/InputApp"
 import { BtnApp } from '../shared/buttons/BtnApp';
 import { SelectApp } from "../shared/SelectApp";
 import { useForm } from '../../hooks/useForm'
+import { useState } from 'react';
 
 export const HomeForm = () => {
+
+	const [showError, setshowError] = useState(false);
 
 	const handleInputChangeForm = (e: any) => {
 		handleInputChange(e);
@@ -21,7 +24,23 @@ export const HomeForm = () => {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		console.log('hahah');
+		setshowError(true);
+		if (isFormValid()) {
+			console.log('registro');
+		}
+	}
+
+	const isFormValid = () => {
+		if (typeDocument === 'dni' && documentNumber.trim().length !== 8) {
+			return false;
+		}
+		if (phone.trim().length !== 9) {
+			return false;
+		}
+		if (license.trim().length !== 6) {
+			return false;
+		}
+		return true;
 	}
 
 	const [ formValues, handleInputChange ] = useForm({
@@ -52,6 +71,8 @@ export const HomeForm = () => {
 						name="documentNumber"
 						value={ documentNumber }
 						handleInputChange={ handleInputChangeForm }
+						hasError={showError && (typeDocument === 'dni' && documentNumber.trim().length !== 8)}
+						errorMessage="Debe ser 8 digitos"
 					/>
 				</div>
 				<InputApp 
@@ -61,6 +82,8 @@ export const HomeForm = () => {
 					name="phone"
 					value={ phone }
 					handleInputChange={ handleInputChangeForm }
+					hasError={showError && phone.length !== 9}
+					errorMessage="Debe ser 9 digitos"
 				/>
 				<InputApp 
 					optionalClass="mb-16"
@@ -69,6 +92,8 @@ export const HomeForm = () => {
 					name="license"
 					value={ license }
 					handleInputChange={ handleInputChangeForm }
+					hasError={showError && license.length !== 6}
+					errorMessage="Debe ser 6 digitos"
 				/>
 				<div className="home-form__multiple home-form__multiple--check">
 					<CheckBoxApp

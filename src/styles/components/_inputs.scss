@@ -12,6 +12,11 @@
 		color: $light-grey;
 		font-size: $medium16;
 	}
+
+	&__has-error {
+		color: $rimac-red;
+		font-size: $small10;
+	}
 }
 
 .content-select {
