@@ -5,6 +5,8 @@ type InputArgs = {
 	name: string,
 	value: string | number,
 	handleInputChange: (e: any) => void,
+	hasError?: boolean;
+	errorMessage?: string;
 }
 
 export const InputApp = (
@@ -13,7 +15,9 @@ export const InputApp = (
 		placeholder,
 		name,
 		value,
-		handleInputChange
+		handleInputChange,
+		hasError,
+		errorMessage
 	}: InputArgs) => {
 
 	return (
@@ -27,6 +31,7 @@ export const InputApp = (
 				autoComplete="off"
 				onChange={ handleInputChange }
 			/>
+			<p className="input-app__has-error">{hasError ? errorMessage : ''}</p>
 		</div>
 	)
 }
