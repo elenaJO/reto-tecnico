@@ -22,6 +22,17 @@ export const HomeForm = () => {
 	const handleLogin = (e) => {
 		e.preventDefault();
 		console.log('hahah');
+		if (isFormValid()) {
+			console.log('registro');
+		}
+	}
+
+	const isFormValid = () => {
+		if (documentNumber.trim().length === 0) {
+			console.log('hahah');
+			return false;
+		}
+		return true;
 	}
 
 	const [ formValues, handleInputChange ] = useForm({
