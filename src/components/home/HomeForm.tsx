@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom'
 
 import { useDispatch } from 'react-redux';
 import { startRegister } from "../../actions/auth";
+import { DocumentOptions } from "../../utils/dataEnum";
 
 export const HomeForm = () => {
 	const dispatch = useDispatch();
@@ -33,7 +34,7 @@ export const HomeForm = () => {
 		setshowError(true);
 		if (isFormValid()) {
 			dispatch(startRegister(documentNumber, phone, license));
-			history.push('/data-plan');
+			history.push('/data-vehicle');
 		}
 	}
 
@@ -70,6 +71,7 @@ export const HomeForm = () => {
 						optionalClass="home-form__select"
 						name="typeDocument"
 						handleSelectChange={ handleInputChangeForm }
+						items={DocumentOptions}
 					/>
 					<InputApp 
 						optionalClass="home-form__input"
