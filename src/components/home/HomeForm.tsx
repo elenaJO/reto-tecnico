@@ -4,8 +4,14 @@ import { BtnApp } from '../shared/buttons/BtnApp';
 import { SelectApp } from "../shared/SelectApp";
 import { useForm } from '../../hooks/useForm'
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom'
+
+import { useDispatch } from 'react-redux';
+import { startRegister } from "../../actions/auth";
 
 export const HomeForm = () => {
+	const dispatch = useDispatch();
+	const history = useHistory();
 
 	const [showError, setshowError] = useState(false);
 
@@ -26,7 +32,8 @@ export const HomeForm = () => {
 		e.preventDefault();
 		setshowError(true);
 		if (isFormValid()) {
-			console.log('registro');
+			dispatch(startRegister(documentNumber, phone, license));
+			history.push('/data-plan');
 		}
 	}
 
@@ -40,7 +47,7 @@ export const HomeForm = () => {
 		if (license.trim().length !== 6) {
 			return false;
 		}
-		return true;
+		return accept;
 	}
 
 	const [ formValues, handleInputChange ] = useForm({
