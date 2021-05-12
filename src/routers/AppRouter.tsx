@@ -4,22 +4,20 @@ import { HeaderApp } from '../components/shared/HeaderApp';
 import {
   BrowserRouter as Router,
   Switch,
-	Redirect
+	Redirect,
 } from 'react-router-dom';
 
 export const AppRouter = () => {
 	return (
 		<>
-			<HeaderApp/>
-			<>
-				<Router>
-					<Switch>
-						<PublicRouter path="/registro"/>
-						<PrivateRouter path="/"/>
-						<Redirect to="/registro"/>
-					</Switch>
-				</Router>
-			</>
+			<Router>
+				<HeaderApp/>
+				<Switch>
+					<PublicRouter path="/registro"/>
+					<PrivateRouter path="/"/>
+					<Redirect to="/registro"/>
+				</Switch>
+			</Router>
 		</>
 	)
 }

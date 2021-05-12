@@ -1,5 +1,6 @@
 .header-app {
 	align-items: center;
+	background-color: $white;
 	border-bottom: 1px solid $light-blue;
 	color: $medium-grey;
 	display: flex;
@@ -8,6 +9,7 @@
 	justify-content: space-between;
 	padding: 20px 32px;
 	position: fixed;
+	top: 0;
 	width: 100%;
 
 	&__text {
@@ -21,5 +23,11 @@
 	&__content-call {
 		display: flex;
 		align-items: center;
+	}
+
+	&.ishome {
+		background-color: $medium-white;
+		border-bottom: none;
+		position: relative;
 	}
 }
