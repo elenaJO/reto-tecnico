@@ -1,0 +1,31 @@
+.welcome-banner {
+	&__image {
+		background-image: url('../../assets/images/person-welcome-mobile.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 208px;
+		margin-top: 60px;
+	}
+
+	&__content {
+		padding: 45px 32px 56px 32px;
+	}
+
+	&__title {
+		color: $primary;
+		font-size: $large28;
+		line-height: $large36;
+
+		&--red {
+			color: $rimac-red;
+		}
+	}
+
+	&__message {
+		color: $medium-grey;
+		font-size: $medium16;
+		line-height: $large28;
+		margin: 24px 0 40px 0;
+	}
+}
