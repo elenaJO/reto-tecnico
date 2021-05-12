@@ -3,5 +3,6 @@ export const types = {
   setSumAssured: '[Amount] setSumAssured',
   setDataCar: '[Car] setDataCar',
   setCoverageAmount: '[Car] setCoverageAmount',
+  addCoverage: '[Auth] addCoverage',
 }
   

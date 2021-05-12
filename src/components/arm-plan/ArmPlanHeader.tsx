@@ -1,10 +1,16 @@
 import imgCard from '../../assets/images/person-card.svg';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 export const ArmPlanHeader = () => {
 
 	const { license, modelCar, yearCar } = useSelector((state: any) => state.auth);
+	const history = useHistory();
 
+	const goToBack = () => {
+		history.push('/datos-auto');
+	}
+	
 	return (
 		<div className="arm-plan-header">
 			<h2 className="arm-plan-header__title">Mira las coberturas</h2>
@@ -13,7 +19,12 @@ export const ArmPlanHeader = () => {
 				<div className="arm-plan-header__content">
 					<p className="arm-plan-header__text--small">Placa: { license }</p>
 					<p className="arm-plan-header__text mb-16">{modelCar} { yearCar }</p>
-					<button className="arm-plan-header__btn">EDITAR</button>
+					<button 
+						className="arm-plan-header__btn"
+						onClick={ goToBack }
+					>
+							EDITAR
+						</button>
 				</div>
 				<div className="arm-plan-header__card-image">
 					<img 

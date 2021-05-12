@@ -6,7 +6,10 @@ import { ArmPlanTotal } from "./ArmPlanTotal"
 export const ArmPlanScreen = () => {
 	return (
 		<>
-			<AutoDataSteps/>
+			<AutoDataSteps
+				step={2}
+				totalStep={2}
+			/>
 			<ArmPlanHeader/>
 			<ArmPlanOffOn/>
 			<ArmPlanTotal/>

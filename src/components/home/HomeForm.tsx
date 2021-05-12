@@ -34,7 +34,7 @@ export const HomeForm = () => {
 		setshowError(true);
 		if (isFormValid()) {
 			dispatch(startRegister(documentNumber, phone, license));
-			history.push('/data-vehicle');
+			history.push('/datos-auto');
 		}
 	}
 

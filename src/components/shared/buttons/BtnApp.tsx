@@ -2,7 +2,7 @@ type BtnArgs = {
 	title: string,
 	type?: string,
 	disabled?: boolean, 
-	handleClick?: (e: any) => void,
+	handleClick?: (e?: any) => void,
 }
 
 export const BtnApp = ({ title, handleClick, disabled = false }: BtnArgs) => {
