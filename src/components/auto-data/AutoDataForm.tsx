@@ -1,5 +1,5 @@
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { BtnApp } from "../shared/buttons/BtnApp"
 import { RadioBtnApp } from "../shared/RadioBtnApp"
@@ -8,9 +8,12 @@ import imgCar from '../../assets/images/car.svg';
 import { CounterApp } from "../shared/CounterApp";
 import { useForm } from '../../hooks/useForm';
 import { ModelOptions, YearOptions } from '../../utils/dataEnum';
+import { setSumAssuredAc } from '../../actions/amount';
 
 export const AutoDataForm = () => {
+	const dispatch = useDispatch();
 	const { name } = useSelector((state: any) => state.auth);
+	const { setSumAssured } = useSelector((state: any) => state.amount);
 
 	const [ formValues, handleInputChange ] = useForm({
 		year: '',
@@ -26,7 +29,12 @@ export const AutoDataForm = () => {
 
 	const handleLogin = (e) => {
 		e.preventDefault();
-		console.log(year, model, gas);
+		console.log(year, model, gas, e);
+	}
+
+	const handleChangeValue = (value: number) => {
+		console.log(value);
+		dispatch(setSumAssuredAc(value));
 	}
 	
 	return (
@@ -65,12 +73,13 @@ export const AutoDataForm = () => {
 						optionalClass="radio-right"
 						name="gas"
 						value="si"
-						checked={ true }
+						checked={ gas === 'si' }
 						handleCheckChange={handleInputChangeForm}
 					/>
 					<RadioBtnApp
 						name="gas"
 						value="no"
+						checked={ gas === 'no' }
 						handleCheckChange={handleInputChangeForm}
 					/>
 				</div>
@@ -82,7 +91,13 @@ export const AutoDataForm = () => {
 					<span className="auto-data-form__price text-right">MAX $16,500</span>
 				</div>
 			</div>
-			<CounterApp/>
+			<CounterApp 
+				numberAdd={ 100 }
+				minorRank={ 12500 }
+				higherRank={ 16500 }
+				initialValue={ setSumAssured }
+				handleChangeValue={ handleChangeValue }
+			/>
 			<BtnApp 
 				title="continuar"
 				type="submit"
