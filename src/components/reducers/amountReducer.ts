@@ -1,7 +1,8 @@
 import { types } from '../types/types';
 
 const initialAmount = {
-	setSumAssured: 12500
+	setSumAssured: 12500,
+	coverageAmount: 20
 }
 
 export const amountReducer = (state = initialAmount, action: any) => {
@@ -10,7 +11,12 @@ export const amountReducer = (state = initialAmount, action: any) => {
 			return {
 				...state,
 				setSumAssured: action.payload.setSumAssured,
-			}	
+			}
+		case types.setCoverageAmount:
+			return {
+				...state,
+				coverageAmount: state.coverageAmount + action.payload.coverageAmount,
+			}			
 		default:
 			return state;
 	}

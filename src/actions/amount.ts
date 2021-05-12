@@ -6,3 +6,11 @@ export const setSumAssuredAc = (amount: number) => ({
 		setSumAssured: amount
 	}
 });
+
+
+export const setCoverageAmountAc = (amount: number) => ({
+	type: types.setCoverageAmount,
+	payload: {
+		coverageAmount: amount
+	}
+});

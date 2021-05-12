@@ -3,8 +3,18 @@ import imgTwo from '../../assets/icons/icon_damage.svg';
 import imgThree from '../../assets/icons/icon_perdidatotal.svg';
 import iconDown from '../../assets/icons/check_purple.svg';
 import { SwitchApp } from '../shared/SwitchApp';
+import { useDispatch } from 'react-redux';
+import { setCoverageAmountAc } from '../../actions/amount';
+import { amounts } from '../../utils/dataEnum';
 
 export const ArmPlanTab = () => {
+	const dispatch = useDispatch();
+
+	const handleCheckPartial = (e: any) => {
+		const modAmount = e.target.checked ? amounts[e.target.name] : (amounts[e.target.name] * -1);
+		dispatch(setCoverageAmountAc(modAmount));
+	}
+
 	return (
 		<div className="arm-plan-tab">
 			<div className="arm-plan-tab__titles">
@@ -25,7 +35,10 @@ export const ArmPlanTab = () => {
 							<img src={imgOne} alt="" />
 							<span className="arm-plan-tab__content-tab__case">Llanta robada</span>
 						</div>
-						<SwitchApp/>
+						<SwitchApp
+							name="partialTheft"
+							handleCheckChange={ handleCheckPartial }
+						/>
 					</div>
 					<div className="arm-plan-tab__content-tab__content-text">
 						<p className="arm-plan-tab__content-tab__paragraph mb-16">He salido de casa a las cuatro menos cinco 
@@ -48,7 +61,10 @@ export const ArmPlanTab = () => {
 							<img src={imgTwo} alt="" />
 							<span className="arm-plan-tab__content-tab__case">Llanta robada</span>
 						</div>
-						<SwitchApp/>
+						<SwitchApp
+							name="trafficAccident"
+							handleCheckChange={ handleCheckPartial }
+						/>
 					</div>
 					<div className="arm-plan-tab__content-tab__content-text">
 						<p className="arm-plan-tab__content-tab__paragraph mb-16">He salido de casa a las cuatro menos cinco 
@@ -71,7 +87,10 @@ export const ArmPlanTab = () => {
 							<img src={imgThree} alt="" />
 							<span className="arm-plan-tab__content-tab__case">Llanta robada</span>
 						</div>
-						<SwitchApp/>
+						<SwitchApp
+							name="totalLoss"
+							handleCheckChange={ handleCheckPartial }
+						/>
 					</div>
 					<div className="arm-plan-tab__content-tab__content-text">
 						<p className="arm-plan-tab__content-tab__paragraph mb-16">He salido de casa a las cuatro menos cinco 

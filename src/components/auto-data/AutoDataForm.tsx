@@ -46,13 +46,12 @@ export const AutoDataForm = () => {
 		e.preventDefault();
 		setshowError(true);
 		if (isFormValid()) {
-			dispatch(setDataCarAc(year, model));
+			dispatch(setDataCarAc(year, model, gas));
 			history.push('/data-plan');
 		}
 	}
 
 	const handleChangeValue = (value: number) => {
-		console.log(value);
 		dispatch(setSumAssuredAc(value));
 	}
 	

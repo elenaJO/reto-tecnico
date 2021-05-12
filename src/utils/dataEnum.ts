@@ -51,3 +51,9 @@ export const ModelOptions: DataOptios[] = [
 		name: 'Titan'
 	},
 ];
+
+export const amounts = {
+	partialTheft: 15,
+	trafficAccident: 20,
+	totalLoss: 50,
+}
