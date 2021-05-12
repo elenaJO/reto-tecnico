@@ -1,5 +1,6 @@
 export const types = {
   login: '[Auth] login',
-  setSumAssured: '[Mount] setSumAssured',
+  setSumAssured: '[Amount] setSumAssured',
+  setDataCar: '[Car] setDataCar',
 }
   
