@@ -27,10 +27,11 @@ export const login = (
 	}
 });
 
-export const setDataCarAc= (year: string, model: string) => ({
+export const setDataCarAc= (year: string, model: string, useGas: string) => ({
 	type: types.setDataCar,
 	payload: {
 		year,
-		model
+		model,
+		useGas
 	}
 });

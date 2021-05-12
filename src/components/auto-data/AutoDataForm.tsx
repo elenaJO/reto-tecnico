@@ -46,7 +46,7 @@ export const AutoDataForm = () => {
 		e.preventDefault();
 		setshowError(true);
 		if (isFormValid()) {
-			dispatch(setDataCarAc(year, model));
+			dispatch(setDataCarAc(year, model, gas));
 			history.push('/data-plan');
 		}
 	}

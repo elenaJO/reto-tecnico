@@ -17,6 +17,7 @@ export const authReducer = (state = {}, action: any) => {
 				...state,
 				yearCar: action.payload.year,
 				modelCar: action.payload.model,
+				useGasCar: action.payload.useGas,
 			}
 		}		
 		default:

@@ -1,7 +1,8 @@
 import { types } from '../types/types';
 
 const initialAmount = {
-	setSumAssured: 12500
+	setSumAssured: 12500,
+	coverageAmount: 20
 }
 
 export const amountReducer = (state = initialAmount, action: any) => {
