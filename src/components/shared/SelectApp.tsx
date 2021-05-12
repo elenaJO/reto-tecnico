@@ -5,9 +5,11 @@ type SelectArgs = {
 	name?: string,
 	items?: any[],
 	placeholder ?: string,
+	hasError?: boolean;
+	errorMessage?: string;
 }
 
-export const SelectApp = ({ optionalClass, value, handleSelectChange, name, items, placeholder }: SelectArgs) => {
+export const SelectApp = ({ optionalClass, value, handleSelectChange, name, items, placeholder, hasError, errorMessage}: SelectArgs) => {
 	return (
 		<div className={`${optionalClass} content-select`}>
 			<select 
@@ -25,6 +27,7 @@ export const SelectApp = ({ optionalClass, value, handleSelectChange, name, item
 				))}
 			</select>
 			<i></i>
+			<p className="input-app__has-error">{hasError ? errorMessage : ''}</p>
 		</div>
 	)
 }

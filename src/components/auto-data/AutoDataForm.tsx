@@ -1,5 +1,6 @@
 
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 
 import { BtnApp } from "../shared/buttons/BtnApp"
 import { RadioBtnApp } from "../shared/RadioBtnApp"
@@ -9,11 +10,15 @@ import { CounterApp } from "../shared/CounterApp";
 import { useForm } from '../../hooks/useForm';
 import { ModelOptions, YearOptions } from '../../utils/dataEnum';
 import { setSumAssuredAc } from '../../actions/amount';
+import { useState } from 'react';
+import { setDataCarAc } from '../../actions/auth';
 
 export const AutoDataForm = () => {
 	const dispatch = useDispatch();
+	const history = useHistory();
 	const { name } = useSelector((state: any) => state.auth);
 	const { setSumAssured } = useSelector((state: any) => state.amount);
+	const [showError, setshowError] = useState(false);
 
 	const [ formValues, handleInputChange ] = useForm({
 		year: '',
@@ -27,9 +32,23 @@ export const AutoDataForm = () => {
 		handleInputChange(e);
 	}
 
+	const isFormValid = () => {
+		if (year.trim().length === 0) {
+			return false;
+		}
+		if (model.trim().length === 0) {
+			return false;
+		}
+		return true;
+	}
+
 	const handleLogin = (e) => {
 		e.preventDefault();
-		console.log(year, model, gas, e);
+		setshowError(true);
+		if (isFormValid()) {
+			dispatch(setDataCarAc(year, model));
+			history.push('/data-plan');
+		}
 	}
 
 	const handleChangeValue = (value: number) => {
@@ -50,6 +69,8 @@ export const AutoDataForm = () => {
 					items={YearOptions}
 					placeholder="Año"
 					handleSelectChange={ handleInputChangeForm }
+					hasError={showError && (year.trim().length === 0)}
+					errorMessage="Debe de seleccionar año"
 				/>
 				<SelectApp
 					value={model}
@@ -57,6 +78,8 @@ export const AutoDataForm = () => {
 					items={ModelOptions}
 					placeholder="Marca"
 					handleSelectChange={ handleInputChangeForm }
+					hasError={showError && (model.trim().length === 0)}
+					errorMessage="Debe seleccionar marca"
 				/>
 				<div className="auto-data-form__content-img">
 					<img src={imgCar} alt="carro" height="48"/>

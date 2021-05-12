@@ -16,7 +16,7 @@ export const login = (
 	license: string,
 	name: string,
 	email: string,
-	) => ({
+) => ({
 	type: types.login,
 	payload: {
 		documentNumber,
@@ -24,5 +24,13 @@ export const login = (
 		license,
 		name,
 		email
+	}
+});
+
+export const setDataCarAc= (year: string, model: string) => ({
+	type: types.setDataCar,
+	payload: {
+		year,
+		model
 	}
 });
