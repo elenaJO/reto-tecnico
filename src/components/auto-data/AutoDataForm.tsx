@@ -52,7 +52,6 @@ export const AutoDataForm = () => {
 	}
 
 	const handleChangeValue = (value: number) => {
-		console.log(value);
 		dispatch(setSumAssuredAc(value));
 	}
 	

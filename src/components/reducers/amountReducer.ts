@@ -11,7 +11,12 @@ export const amountReducer = (state = initialAmount, action: any) => {
 			return {
 				...state,
 				setSumAssured: action.payload.setSumAssured,
-			}	
+			}
+		case types.setCoverageAmount:
+			return {
+				...state,
+				coverageAmount: state.coverageAmount + action.payload.coverageAmount,
+			}			
 		default:
 			return state;
 	}
