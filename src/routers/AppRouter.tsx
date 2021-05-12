@@ -14,9 +14,9 @@ export const AppRouter = () => {
 			<>
 				<Router>
 					<Switch>
-						<PublicRouter path="/register"/>
+						<PublicRouter path="/registro"/>
 						<PrivateRouter path="/"/>
-						<Redirect to="/register"/>
+						<Redirect to="/registro"/>
 					</Switch>
 				</Router>
 			</>

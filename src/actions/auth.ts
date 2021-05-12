@@ -35,3 +35,11 @@ export const setDataCarAc= (year: string, model: string, useGas: string) => ({
 		useGas
 	}
 });
+
+export const addCoverageAc= (model: string, value: string | boolean) => ({
+	type: types.addCoverage,
+	payload: {
+		model,
+		value
+	}
+});

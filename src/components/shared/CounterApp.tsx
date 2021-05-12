@@ -14,16 +14,16 @@ export const CounterApp = ({ numberAdd = 1, minorRank, higherRank, initialValue 
 		if (minorRank && c === -1) {
 			if (minorRank <= (value + (numberAdd * c))) {
 				setValue(value + (numberAdd * c));
-				handleChangeValue(value);
+				handleChangeValue(value + (numberAdd * c));
 			}
 		} else if (higherRank && c === 1) {
 			if (higherRank >= (value + (numberAdd * c))) {
 				setValue(value + (numberAdd * c));
-				handleChangeValue(value);
+				handleChangeValue(value + (numberAdd * c));
 			}
 		} else if (!!minorRank && !!higherRank) {
 			setValue(value + (numberAdd * c));
-			handleChangeValue(value);
+			handleChangeValue(value + (numberAdd * c));
 		}
 	}
 

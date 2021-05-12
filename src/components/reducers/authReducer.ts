@@ -19,7 +19,13 @@ export const authReducer = (state = {}, action: any) => {
 				modelCar: action.payload.model,
 				useGasCar: action.payload.useGas,
 			}
-		}		
+		}
+		case types.addCoverage: {
+			return {
+				...state,
+				[action.payload.model]: action.payload.value,
+			}
+		}
 		default:
 			return state;
 	}

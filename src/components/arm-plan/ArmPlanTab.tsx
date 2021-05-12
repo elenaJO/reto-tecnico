@@ -3,16 +3,19 @@ import imgTwo from '../../assets/icons/icon_damage.svg';
 import imgThree from '../../assets/icons/icon_perdidatotal.svg';
 import iconDown from '../../assets/icons/check_purple.svg';
 import { SwitchApp } from '../shared/SwitchApp';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setCoverageAmountAc } from '../../actions/amount';
 import { amounts } from '../../utils/dataEnum';
+import { addCoverageAc } from '../../actions/auth';
 
 export const ArmPlanTab = () => {
 	const dispatch = useDispatch();
+	const { partialTheft, trafficAccident, totalLoss } = useSelector((state: any) => state.auth);
 
 	const handleCheckPartial = (e: any) => {
 		const modAmount = e.target.checked ? amounts[e.target.name] : (amounts[e.target.name] * -1);
 		dispatch(setCoverageAmountAc(modAmount));
+		dispatch(addCoverageAc(e.target.name, e.target.checked));
 	}
 
 	return (
@@ -38,6 +41,7 @@ export const ArmPlanTab = () => {
 						<SwitchApp
 							name="partialTheft"
 							handleCheckChange={ handleCheckPartial }
+							checked={partialTheft || false}
 						/>
 					</div>
 					<div className="arm-plan-tab__content-tab__content-text">
@@ -64,6 +68,7 @@ export const ArmPlanTab = () => {
 						<SwitchApp
 							name="trafficAccident"
 							handleCheckChange={ handleCheckPartial }
+							checked={trafficAccident || false}
 						/>
 					</div>
 					<div className="arm-plan-tab__content-tab__content-text">
@@ -90,6 +95,7 @@ export const ArmPlanTab = () => {
 						<SwitchApp
 							name="totalLoss"
 							handleCheckChange={ handleCheckPartial }
+							checked={totalLoss || false}
 						/>
 					</div>
 					<div className="arm-plan-tab__content-tab__content-text">

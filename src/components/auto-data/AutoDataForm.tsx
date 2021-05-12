@@ -16,14 +16,14 @@ import { setDataCarAc } from '../../actions/auth';
 export const AutoDataForm = () => {
 	const dispatch = useDispatch();
 	const history = useHistory();
-	const { name } = useSelector((state: any) => state.auth);
+	const { name, useGasCar, yearCar, modelCar } = useSelector((state: any) => state.auth);
 	const { setSumAssured } = useSelector((state: any) => state.amount);
 	const [showError, setshowError] = useState(false);
 
 	const [ formValues, handleInputChange ] = useForm({
-		year: '',
-		model: '',
-		gas: 'si',
+		year: yearCar || '',
+		model: modelCar || '',
+		gas: useGasCar || 'si',
 	});
 
 	const { year, model, gas } = formValues;
@@ -47,7 +47,7 @@ export const AutoDataForm = () => {
 		setshowError(true);
 		if (isFormValid()) {
 			dispatch(setDataCarAc(year, model, gas));
-			history.push('/data-plan');
+			history.push('/arma-plan');
 		}
 	}
 
