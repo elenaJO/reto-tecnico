@@ -13,7 +13,7 @@ export const AppRouter = () => {
 			<Router>
 				<HeaderApp/>
 				<Switch>
-					<PublicRouter path="/registro"/>
+					<PublicRouter path="/"/>
 					<PrivateRouter path="/"/>
 					<Redirect to="/registro"/>
 				</Switch>
