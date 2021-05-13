@@ -6,7 +6,7 @@ type RouteArgs = {
 
 export const PrivateRouter = ({ path }: RouteArgs) => {
 	return (
-		<Route path={path}>
+		<Route exact path={path}>
 			<VehicleRouter/>
     </Route>
 	)

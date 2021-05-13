@@ -1,10 +1,12 @@
 import { PublicRouter } from './PublicRouter';
-import { PrivateRouter } from './PrivateRouter';
+// import { PrivateRouter } from './PrivateRouter';
 import { HeaderApp } from '../components/shared/HeaderApp';
+import { AutoDataScreen } from '../components/auto-data/AutoDataScreen';
 import {
   BrowserRouter as Router,
   Switch,
-	Redirect,
+  Route,
+  Redirect,
 } from 'react-router-dom';
 
 export const AppRouter = () => {
@@ -14,7 +16,8 @@ export const AppRouter = () => {
 				<HeaderApp/>
 				<Switch>
 					<PublicRouter path="/registro"/>
-					<PrivateRouter path="/"/>
+					<Route exact path="/datos-auto" component={ AutoDataScreen }/>
+					{/* <PrivateRouter path="/"/> */}
 					<Redirect to="/registro"/>
 				</Switch>
 			</Router>

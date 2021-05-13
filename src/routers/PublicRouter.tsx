@@ -6,7 +6,7 @@ type RouteArgs = {
 
 export const PublicRouter = ({ path }: RouteArgs) => {
 	return (
-		<Route path={path}>
+		<Route exact path={path}>
       <HomeScreen/>
     </Route>
 	)
