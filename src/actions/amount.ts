@@ -14,3 +14,7 @@ export const setCoverageAmountAc = (amount: number) => ({
 		coverageAmount: amount
 	}
 });
+
+export const resetAmountAc = () => ({
+	type: types.resetAmount,
+})
