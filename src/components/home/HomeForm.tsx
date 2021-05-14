@@ -72,6 +72,7 @@ export const HomeForm = () => {
 						name="typeDocument"
 						handleSelectChange={ handleInputChangeForm }
 						items={DocumentOptions}
+						group
 					/>
 					<InputApp 
 						optionalClass="home-form__input"
@@ -82,6 +83,7 @@ export const HomeForm = () => {
 						handleInputChange={ handleInputChangeForm }
 						hasError={showError && (typeDocument === 'dni' && documentNumber.trim().length !== 8)}
 						errorMessage="Debe ser 8 digitos"
+						group
 					/>
 				</div>
 				<InputApp 
