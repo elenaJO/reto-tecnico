@@ -15,7 +15,7 @@ export const WelcomeBanner = () => {
 				</h2>
 				<p className="welcome-banner__message">
 					Enviaremos la confirmación de compra de tu Plan Vehícular
-					Tracking a tu correo: <span className="welcome-banner__message--email">{ email }</span>
+					Tracking a tu correo: <span className="welcome-banner__message welcome-banner__message--email">{ email }</span>
 				</p>
 				<BtnApp title="cómo usar mi seguro"/>
 			</div>

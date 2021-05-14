@@ -17,6 +17,10 @@
 		color: $rimac-red;
 		font-size: $small10;
 	}
+
+	&.group {
+		border-radius: 0 4px 4px 0;
+	}
 }
 
 .content-select {
@@ -44,6 +48,11 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		-o-appearance: none;
+
+		&.group {
+			border-radius: 4px 0 0 4px;
+			border-right: none;
+		}
   }
 
   i {

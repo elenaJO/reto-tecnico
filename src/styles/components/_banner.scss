@@ -4,15 +4,22 @@
 	color: $primary;
 	display: flex;
 	justify-content: space-between;
-	padding: 28px 0 0 0;
 
 	&__content-image {
+		height: 243px;
+		position: relative;
+		width: 182px;
+	}
+
+	 &__image {
 		background-image: url('../../assets/images/person-banner-mobile.svg');
 		background-position-x: right;
 		background-repeat: no-repeat;
-		height: 243px;
-		width: 182px;
-	}
+		height: 100%;
+		position: absolute;
+    top: 24px;
+		width: 100%;
+	 }
 
 	&__text--small {
 		font-size: $small10;

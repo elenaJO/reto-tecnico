@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import { ArmPlanScreen } from '../components/arm-plan/ArmPlanScreen';
 import { WelcomeScreen } from '../components/welcome/WelcomeScreen';
 import { HomeScreen } from '../components/home/HomeScreen';
+import ScrollToTop from '../components/shared/ScrollToTop';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +16,7 @@ export const AppRouter = () => {
 		<>
 			<Router>
 				<HeaderApp/>
+				<ScrollToTop />
 				<Switch>
 					<Route exact path="/registro" component={ HomeScreen }/>
 					<Route exact path="/datos-auto" component={ AutoDataScreen }/>

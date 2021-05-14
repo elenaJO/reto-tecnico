@@ -7,6 +7,7 @@ type InputArgs = {
 	handleInputChange: (e: any) => void,
 	hasError?: boolean;
 	errorMessage?: string;
+	group?: boolean,
 }
 
 export const InputApp = (
@@ -17,13 +18,14 @@ export const InputApp = (
 		value,
 		handleInputChange,
 		hasError,
-		errorMessage
+		errorMessage,
+		group,
 	}: InputArgs) => {
 
 	return (
 		<div className={optionalClass}>
 			<input
-				className="input-app"
+				className={ `input-app ${group ? 'group' : ''}`}
 				type={ type }
 				placeholder={ placeholder }
 				name={ name }

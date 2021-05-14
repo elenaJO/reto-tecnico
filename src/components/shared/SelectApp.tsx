@@ -7,14 +7,15 @@ type SelectArgs = {
 	placeholder ?: string,
 	hasError?: boolean;
 	errorMessage?: string;
+	group?: boolean,
 }
 
-export const SelectApp = ({ optionalClass, value, handleSelectChange, name, items, placeholder, hasError, errorMessage}: SelectArgs) => {
+export const SelectApp = ({ optionalClass, value, handleSelectChange, name, items, placeholder, hasError, errorMessage, group}: SelectArgs) => {
 	return (
 		<div className={`${optionalClass} content-select`}>
 			<select 
 				name={ name }
-				className="content-select__select"
+				className={`content-select__select ${group ? 'group' : ''}`}
 				value={ value }
 				onChange={ handleSelectChange }
 			>
