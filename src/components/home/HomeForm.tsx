@@ -112,11 +112,16 @@ export const HomeForm = () => {
 						name="accept"
 						checked={ accept }
 					/>
-					<p className="home-form__text-check">Acepto la <span className="home-form__text-underline">Política de
+					<p className="home-form__text-check">Acepto la <span className="home-form__text-check home-form__text-underline">Política de
 						Protecciòn de Datos Personales</span> y los 
-						<span className="home-form__text-underline">Términos y Condiciones.</span>
+						<span className="home-form__text-check home-form__text-underline"> Términos y Condiciones.</span>
 					</p>
 				</div>
+				{
+					!accept && showError && (
+						<p className="has-error mb-16">Debe aceptar política, terminos y condiciones</p>
+					)
+				}
 				<BtnApp 
 					title="cotízalo"
 					type="submit"

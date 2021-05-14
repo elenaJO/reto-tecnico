@@ -11,7 +11,7 @@ export const WelcomeBanner = () => {
 			<div className="welcome-banner__content">
 				<h2 className="welcome-banner__title">
 					<span className="welcome-banner__title welcome-banner__title--red">¡Te damos la bienvenida! </span>
-					Cuenta con nosotros para proteger tu vehículo
+					<br />Cuenta con nosotros para proteger tu vehículo
 				</h2>
 				<p className="welcome-banner__message">
 					Enviaremos la confirmación de compra de tu Plan Vehícular

@@ -43,3 +43,7 @@ export const addCoverageAc= (model: string, value: string | boolean) => ({
 		value
 	}
 });
+
+export const resetAuthAc = () => ({
+	type: types.resetAuth,
+})

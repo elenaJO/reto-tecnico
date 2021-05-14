@@ -1,5 +1,6 @@
 
 import { types } from '../types/types';
+const initialState = {};
 
 export const authReducer = (state = {}, action: any) => {
 	switch (action.type) {
@@ -24,6 +25,11 @@ export const authReducer = (state = {}, action: any) => {
 			return {
 				...state,
 				[action.payload.model]: action.payload.value,
+			}
+		}
+		case types.resetAuth: {
+			return {
+				...initialState
 			}
 		}
 		default:

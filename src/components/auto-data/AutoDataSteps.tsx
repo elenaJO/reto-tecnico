@@ -1,5 +1,8 @@
 import iconBack from '../../assets/icons/icon_back_purple.svg';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { resetAmountAc } from '../../actions/amount';
+import { resetAuthAc } from '../../actions/auth';
 
 type AutoDataStepsArgs = {
 	totalStep: number,
@@ -8,9 +11,14 @@ type AutoDataStepsArgs = {
 
 export const AutoDataSteps = ({ totalStep, step }: AutoDataStepsArgs) => {
 	const history = useHistory();
+	const dispatch = useDispatch();
 
 	const goToBack = () => {
 		history.goBack();
+		if (step === 1) {
+			dispatch(resetAmountAc());
+			dispatch(resetAuthAc());
+		}
 	}
 
 	return (
