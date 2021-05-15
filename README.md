@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+# RETO TÉCNICO FRONTEND
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## TECNOLOGÍA
 
-In the project directory, you can run:
+Elegí usar la librería `React` que es obligatorio para realizar el reto , implemente :
 
+- `TypeScript` por las ayuda que ofrece como el tipado estricto para el manejo de props  y la verificación de IntelliSense que mejorar la legibilidad de los componentes.
+- `React-redux` para el manejo de datos globales.
+- `React-router-dom` para el manejo de rutas:  registro, datos-auto, arma-plan y bienvenido
+- `Sass` para los estilos de los componentes
+
+## TAREAS
+
+Las tareas los dividi por `topics` y estos a su vez en actividades más pequeñas,  el reto se logro culminar con las indicaciones propuestas en el diseño y vista mobile.
+
+Las actividades principales son:
+
+-  Maquetación  de todas las pantallas en vista mobile y creación de componentes generales, las actividades se pueden ver en : #1, #12, #19, #24, #57
+-  Implementación de rutas principales #31
+-  Integración de la vista home, donde se instale y configure `react-redux`, realice las validaciones ya que los todos los campos son obligatorios, consumo de API que fue propuesta en el reto #38 
+- Integración pantalla datos de auto , donde se observa los datos del usuario gracias a redux, implementación del contador donde use el hook : `useState` y el botón continuar utilice el hook `useHistory` #39.
+- Integración de la pantalla arma plan donde se implemento la funcionalidad de los switches y selectores donde se utilizo `redux` para almacenar el monto y las opciones que escoge el usuario y el hook `useHistory` para el botón continuar. #52
+- Se maqueto la pantalla gracias version mobile #57.
+- Se realizo algunas mejoras, quedaron pendientes algunas. #62
+
+## PROYECTO
+
+Para correr la web hacer:
+
+### `npm install`
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## COMENTARIOS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+El desarrollo de este reto fue muy satisfactorio porque salí de mi zona de confort ya que llevo 3 años como desarrolladora web con el framework `Vue.js`, y llevo estudiando hace algunos meses `React`, mi experiencia con ella no es mucha en el trabajo se pudo lograr implementar un ecommerce y ahi es donde vi mi interés por esta tecnología y por ello la decisión de buscar otro trabajo para mejorar mis conocimientos.

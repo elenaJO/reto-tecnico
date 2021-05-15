@@ -20,7 +20,6 @@ export const AppRouter = () => {
 				<Switch>
 					<Route exact path="/registro" component={ HomeScreen }/>
 					<Route exact path="/datos-auto" component={ AutoDataScreen }/>
-					<Route exact path="/datos-auto" component={ AutoDataScreen }/>
 					<Route exact path="/arma-plan" component={ ArmPlanScreen }/>
 					<Route exact path="/bienvenido" component={ WelcomeScreen }/>
 					<Redirect to="/registro"/>
