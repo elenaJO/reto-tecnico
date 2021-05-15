@@ -16,13 +16,13 @@ Las tareas los dividi por `topics` y estos a su vez en actividades más pequeña
 
 Las actividades principales son:
 
--  Maquetación  de todas las pantallas en vista mobile y creación de componentes generales, las actividades se pueden ver en : #1, #12, #19, #24, #57
--  Implementación de rutas principales #31
--  Integración de la vista home, donde se instale y configure `react-redux`, realice las validaciones ya que los todos los campos son obligatorios, consumo de API que fue propuesta en el reto #38 
-- Integración pantalla datos de auto , donde se observa los datos del usuario gracias a redux, implementación del contador donde use el hook : `useState` y el botón continuar utilice el hook `useHistory` #39.
-- Integración de la pantalla arma plan donde se implemento la funcionalidad de los switches y selectores donde se utilizo `redux` para almacenar el monto y las opciones que escoge el usuario y el hook `useHistory` para el botón continuar. #52
-- Se maqueto la pantalla gracias version mobile #57.
-- Se realizo algunas mejoras, quedaron pendientes algunas. #62
+-  Maquetación  de todas las pantallas en vista mobile y creación de componentes generales, las actividades se pueden ver en : [#1](https://github.com/elenaJO/reto-tecnico/issues/1), [#12](https://github.com/elenaJO/reto-tecnico/issues/12), [#19](https://github.com/elenaJO/reto-tecnico/issues/19), [#24](https://github.com/elenaJO/reto-tecnico/issues/24), [#57](https://github.com/elenaJO/reto-tecnico/issues/57)
+-  Implementación de rutas principales [#31](https://github.com/elenaJO/reto-tecnico/issues/31)
+-  Integración de la vista home, donde se instale y configure `react-redux`, realice las validaciones ya que los todos los campos son obligatorios, consumo de API que fue propuesta en el reto [#38 ](https://github.com/elenaJO/reto-tecnico/issues/38)
+- Integración pantalla datos de auto , donde se observa los datos del usuario gracias a redux, implementación del contador donde use el hook : `useState` y el botón continuar utilice el hook `useHistory` [#39](https://github.com/elenaJO/reto-tecnico/issues/39).
+- Integración de la pantalla arma plan donde se implemento la funcionalidad de los switches y selectores donde se utilizo `redux` para almacenar el monto y las opciones que escoge el usuario y el hook `useHistory` para el botón continuar. [#52](https://github.com/elenaJO/reto-tecnico/issues/52)
+- Se maqueto la pantalla gracias version mobile [#57.](https://github.com/elenaJO/reto-tecnico/issues/57)
+- Se realizo algunas mejoras, quedaron pendientes algunas. [#62](https://github.com/elenaJO/reto-tecnico/issues/62)
 
 ## PROYECTO
 
